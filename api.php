@@ -1,6 +1,10 @@
 <?php
-$API_URL = 'https://cyber-techo.000webhostapp.com/config/api.php';
+$API_URL = 'http://localhost/ims/api/employee/read.php';
 $json = file_get_contents($API_URL);
 $data = json_decode($json, true);
 
-echo $json;
+// print_r ($data['data']);
+
+foreach($data['data'] as $data){
+    echo $data['username'].'<br>';
+}

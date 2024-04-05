@@ -14,7 +14,7 @@
                                 data-bs-toggle="tooltip" data-bs-placement="left" title="Users Management"></i></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link me-3" href="attendance_monitoring.php"><i
+                        <a class="nav-link me-3" href="attendance.php"><i
                                 class="fa-solid fa-clipboard-user fa-2xl" data-bs-toggle="tooltip" data-bs-placement="left"
                                 title="Attendance Monitoring"></i></a>
                     </li>

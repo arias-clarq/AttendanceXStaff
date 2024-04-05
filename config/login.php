@@ -10,7 +10,7 @@ function user_login($login_user, $login_pass, $user, $pass)
     }
 }
 
-$API_URL = 'https://cyber-techo.000webhostapp.com/config/api.php';
+$API_URL = 'http://localhost/ims/api/employee/read.php';
 
 $username = $_POST["username"];
 $password = $_POST["password"];
@@ -22,8 +22,8 @@ $data = json_decode($json, true);
 $user_login = false;
 $user_role = '';
 
-foreach ($data as $data) {
-    $employee = $data['employee'];
+foreach ($data['data'] as $data) {
+    $employee = $data;
     $user_login = user_login($username, $password, $employee['username'], $employee['password']);
     if ($user_login == true) {
         $user_role = $employee['login_role'];
