@@ -27,6 +27,7 @@ foreach ($data['data'] as $data) {
     $user_login = user_login($username, $password, $employee['username'], $employee['password']);
     if ($user_login == true) {
         $user_role = $employee['login_role'];
+        $id = $employee['account_id'];
         break;
     }
 }
@@ -34,6 +35,7 @@ foreach ($data['data'] as $data) {
 if ($user_login == true) {
     $_SESSION['user_role'] = $user_role;
     $_SESSION['login'] = true;
+    $_SESSION['id'] = $id;
     echo json_encode(['success' => true, 'role' => $user_role]);
 } else {
     $_SESSION['message'] = 'Incorrect Username or Password';
