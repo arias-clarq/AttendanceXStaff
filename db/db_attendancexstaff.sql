@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 05, 2024 at 04:15 PM
+-- Generation Time: Apr 13, 2024 at 12:27 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.0.30
 
@@ -37,15 +37,6 @@ CREATE TABLE `tbl_attendance` (
   `workhoursID` int(50) DEFAULT NULL,
   `worktime_statusID` int(50) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Dumping data for table `tbl_attendance`
---
-
-INSERT INTO `tbl_attendance` (`attendanceID`, `employeeID`, `date`, `timeIn`, `timeOut`, `statusID`, `workhoursID`, `worktime_statusID`) VALUES
-(7, 4, '2024-04-05', '20:41:02', '20:41:06', 1, 1, 2),
-(8, 15, '2024-04-05', '20:41:36', '20:41:38', 2, 1, 3),
-(9, 4, '2024-04-06', '20:42:50', '20:42:52', 2, 1, 3);
 
 -- --------------------------------------------------------
 
@@ -141,7 +132,7 @@ ALTER TABLE `tbl_worktime_status`
 -- AUTO_INCREMENT for table `tbl_attendance`
 --
 ALTER TABLE `tbl_attendance`
-  MODIFY `attendanceID` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `attendanceID` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 
 --
 -- AUTO_INCREMENT for table `tbl_status`

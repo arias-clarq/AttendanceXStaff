@@ -88,7 +88,6 @@ include '../dashboard/nav.php';
                     }
                 });
 
-                // Add this script after the existing JavaScript code
                 data.data.forEach(employee => {
                     const formattedData = {
                         account_id: employee.account_id,
@@ -165,9 +164,9 @@ include '../dashboard/nav.php';
                                     return response.json();
                                 })
                                 .then(data => {
+                                    window.location.reload();
                                     console.log('Employee deleted successfully:', data);
                                     showSuccessMessage('Employee deleted successfully');
-                                    window.location.reload();
                                 })
                                 .catch(error => {
                                     console.error('Error deleting employee:', error.message);
